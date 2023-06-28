@@ -3,6 +3,7 @@ import "./App.css";
 import ReminderList from "./component/Reminder";
 import Reminder from "./models/interface";
 import ReminderServises from "./servises/Reminder";
+import NewReminder from "./component/newReminder";
 function App() {
   const [reminder, setReminder] = useState<Reminder[]>([]);
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <>
       <div className="app">
+        <NewReminder />
         <ReminderList item={reminder} removeReminder={removeReminder} />
       </div>
     </>
